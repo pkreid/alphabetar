@@ -2,6 +2,13 @@
 import string
 from os import walk
 
+
+f=[]
+for (dirname,dirpath,filenames) in walk("/home/kreid/music"):
+    f.extend(dirname)
+print f
+
+
 arr =[]
 x = 0
 for letter in string.ascii_uppercase:
@@ -9,8 +16,6 @@ for letter in string.ascii_uppercase:
     x = x+1
 print arr
 x = 0
-for item in arr:
-   arr[x] =  
 
 #I need an array with 26 elements, each one contating the corresponding folde
 
