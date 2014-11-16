@@ -16,8 +16,7 @@ for letter in string.ascii_uppercase:
 
         elif len(tarball) != 0:
            clean = ' '.join(str(i) for i in (tarball))     #format it nicely
-           print clean
-           subprocess.Popen(["tar","cvf","Music_" + letter +".tar",  str(clean)])   #TODO make the file names optional, preferably incoporating $(date)
+           subprocess.Popen(["bash","-c" ,"tar cvf Music_" + str(letter) +".tar " + str(clean)])   #TODO make the file names optional, preferably incoporating $(date)
            tarball = ()      #reset
 	   
 	   
