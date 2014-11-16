@@ -13,11 +13,11 @@ for letter in string.ascii_uppercase:
     for file in f:
         if file[0][0] == letter:         #Match the folders up with the corresponding tarball
             tarball = tarball + ("/home/kreid/music/" + str(file),)  #Append to the tuple with path written in
-            #alphabet[letter] = (file,)
+
         elif len(tarball) != 0:
            clean = ' '.join(str(i) for i in (tarball))     #format it nicely
            print clean
-           subprocess.Popen(["tar","cvf","Music_" + letter +".tar",  clean])   #TODO make the file names optional, preferably incoporating $(date)
+           subprocess.Popen(["tar","cvf","Music_" + letter +".tar",  str(clean)])   #TODO make the file names optional, preferably incoporating $(date)
            tarball = ()      #reset
 	   
 	   
